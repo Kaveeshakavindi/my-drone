@@ -1,13 +1,4 @@
-import { FiSearch } from "react-icons/fi";
-import { FiShoppingCart } from "react-icons/fi";
 import { PiPinwheelDuotone } from "react-icons/pi";
-const items: React.ReactNode[] = [
-  "SPECS",
-  "VIDEO",
-  "FAQ",
-  <FiSearch />,
-  <FiShoppingCart />,
-];
 
 export default function NavBar() {
   return (

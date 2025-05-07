@@ -3,7 +3,9 @@ import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import { OrbitControls } from "@react-three/drei";
 import "../styles/styles.css";
+
 export default function Hero() {
+  const width = window.innerWidth;
   return (
     <div className="h-[100vh] w-[100vw] bg-[linear-gradient(45deg,rgba(28,26,26,1)_0%,rgba(38,38,38,1)_42%,rgba(112,112,112,1)_92%,rgba(143,141,141,1)_100%)]  flex flex-col justify-center items-start">
       <div
@@ -17,7 +19,8 @@ export default function Hero() {
         <Canvas
           camera={{
             position: [5, 10, 50],
-            fov: 12,
+            fov: width < 768 ? 30 : 12,
+            //change fov according to the media screen width if lower higher fov
           }}
         >
           <ambientLight intensity={10} />

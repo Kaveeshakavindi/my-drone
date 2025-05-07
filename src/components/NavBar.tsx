@@ -11,16 +11,11 @@ const items: React.ReactNode[] = [
 
 export default function NavBar() {
   return (
-    <div className="font-[var(--font-russo)] h-full bg-orange-600 text-neutral-100 flex p-4  flex-row justify-between items-center w-full ">
+    <div className="font-[var(--font-russo)] bg-orange-600 text-neutral-100 flex p-4  flex-row justify-between items-center w-full ">
       <div className="flex italic gap-[0.5rem] items-center text-3xl  font-italic ">
         <PiPinwheelDuotone />
         EMBER
       </div>
-      {/* <ul className="flex flex-row w-[30%] text-sm  justify-between items-center">
-        {items.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul> */}
     </div>
   );
 }

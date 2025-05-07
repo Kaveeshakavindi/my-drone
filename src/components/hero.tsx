@@ -13,11 +13,11 @@ export default function Hero() {
         DRONE
       </div>
       <div className="ember  z-60">EMBER</div>
-      <div className="h-[90%] w-full z-10000">
+      <div className="h-[100%] w-full z-10000">
         <Canvas
           camera={{
-            position: [0, 0, 50],
-            fov: 10,
+            position: [5, 10, 50],
+            fov: 12,
           }}
         >
           <ambientLight intensity={10} />

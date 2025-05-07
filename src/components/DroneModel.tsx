@@ -1,9 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useAnimations, useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
-export default function DroneModel(props: any) {
+export default function DroneModel() {
   const group = useRef<THREE.Group>(null);
   const { scene, animations } = useGLTF("/drone.glb");
   const { actions } = useAnimations(animations, group);
@@ -14,7 +14,7 @@ export default function DroneModel(props: any) {
     Object.values(actions).forEach((action) => {
       if (action) {
         action.play();
-        action.timeScale = 1; // normal speed initially
+        action.timeScale = 4; // normal speed initially
       }
     });
 
@@ -59,5 +59,5 @@ export default function DroneModel(props: any) {
     }
   });
 
-  return <primitive ref={group} object={scene} scale={0.5} {...props} />;
+  return <primitive ref={group} scale={0.5} object={scene} />;
 }

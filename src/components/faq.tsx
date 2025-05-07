@@ -1,5 +1,4 @@
-import { aboutCards, faqs } from "@/data";
-import { Card } from "./card";
+import { faqs } from "@/data";
 import FaqCard from "./questionCard";
 
 export default function Faq() {

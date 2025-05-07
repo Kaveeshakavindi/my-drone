@@ -1,9 +1,9 @@
+import { JSX } from "react";
+
 export interface StickyScrollProps {
   images: string[];
   text: string[];
 }
-
-export type DroneState = "idle" | "landHero" | "flyToAbout" | "landAbout";
 
 export interface cardProps {
   title: string;
@@ -17,3 +17,6 @@ export interface faqCardProps {
 export interface carouselProps {
   images: { path: string; alt: string }[];
 }
+
+export type DroneModelProps = Partial<{ object: object }> &
+  JSX.IntrinsicElements["primitive"];
